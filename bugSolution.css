@@ -1,0 +1,17 @@
+/* bug.css */
+.element {
+  width:calc(100%-10px); /* Missing space before '-' */
+  height:calc(50%+2em); /* Missing space before '+' */
+  margin:calc(10%/2);   /* Invalid unit '%/2'*/
+  padding:calc(calc(20px+10px)*2); /* Incorrect Nesting */
+  font-size:calc(100% + 1em); /* Incompatible Units */
+}
+
+/* bugSolution.css */
+.element {
+  width: calc(100% - 10px);
+  height: calc(50% + 2em);
+  margin: calc(10%/2);
+  padding: calc((20px + 10px) * 2);
+  font-size:calc(100% + 16px); /* Corrected by using pixels instead of em */
+}
